@@ -1,0 +1,45 @@
+<mat-accordion>
+  <mat-expansion-panel [expanded]="0">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <mat-icon class="mat-icon">account_circle</mat-icon> AGENDA PERSONAL
+      </mat-panel-title>
+      <mat-panel-description>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <form class="form" [formGroup]="diaryForm">
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Nombre" value="" formControlName="name">
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Apellido" value="" formControlName="lastName">
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+            <input type="number" matInput placeholder="Edad" value="" formControlName="age">
+        </mat-form-field>
+        
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Email" value="" formControlName="email">
+        </mat-form-field>
+
+        <button mat-raised-button color="accent"
+        [disabled]="!diaryForm.valid" 
+        (click)="onFormSubmit(diaryForm.value)">Guardar persona</button>
+
+    </form>
+
+  </mat-expansion-panel>
+</mat-accordion>
+
+<mat-card *ngFor="let diary of diaries; let i = index">
+    <p><strong>{{ diary.name }} {{ diary.lastName }}</strong></p>
+    <p><small>Edad: {{ diary.age }}</small></p>
+    <p><small>Email: {{ diary.email }}</small></p>
+
+    <hr>
+
+    <button mat-raised-button color="accent" (click)="diaryDelete(i)">Eliminar</button>
+</mat-card>

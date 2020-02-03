@@ -1,0 +1,23 @@
+.mat-icon{
+    font-size: 20px;
+}
+
+.full-width{
+    width: 100%;
+}
+
+.form{
+    max-width: 450px;
+    display: block;
+    margin: auto;
+}
+
+mat-card{
+    width: 250px;
+    margin: 20px;
+    display: inline-block;
+
+    button{
+        width: 100%;
+    }
+}
