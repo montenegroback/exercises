@@ -1,0 +1,31 @@
+{
+    "tasks": [
+        {
+            "title": "Task 1",
+            "description": "Lorem impun",
+            "responsible": "Cesar",
+            "completed": false
+        },
+
+        {
+            "title": "Task 2",
+            "description": "Lorem impun",
+            "responsible": "Cesar",
+            "completed": false
+        },
+
+        {
+            "title": "Task 3",
+            "description": "Lorem impun",
+            "responsible": "Cesar",
+            "completed": true
+        },
+
+        {
+            "title": "Task 4",
+            "description": "Lorem impun",
+            "responsible": "Cesar",
+            "completed": true
+        }
+    ]
+}
